@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leanovia Virtual Institute | Premium Online Tutoring for IGCSE, GCSE, A & O Levels</title>
+  <meta name="description" content="Struggling with grades? Connect with expert online tutors at Leanovia Virtual Institute. Specialized preparation for IGCSE, GCSE, Pearson Edexcel, A Levels, and O Levels. Book your free demo class today.">
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION (SHARED)
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo-link">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+          <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+        </svg>
+        <span>Leanovia <span class="logo-accent-text">Virtual Institute</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active" id="nav-home-link">Home</a>
+        <a href="#curriculums" class="nav-link" id="nav-curr-link">Curriculums</a>
+        <a href="#how-it-works" class="nav-link" id="nav-how-link">How It Works</a>
+        <a href="#faqs" class="nav-link" id="nav-faq-link">FAQs</a>
+        <a href="#book-demo" class="nav-link" id="nav-contact-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#book-demo" class="btn btn-accent btn-glow" id="header-cta-btn">Book Free Demo</a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HOME VIEW (LANDING PAGE)
+         ========================================== -->
+    <div id="home-view">
+      
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content fade-in">
+            <div class="hero-badge">
+              <span></span> Trusted by Families Worldwide for Outstanding Results
+            </div>
+            <h1 class="hero-title">
+              Struggling With Grades?
+              <span class="text-gradient">Connect With An Expert</span>
+              Online Tutor Today.
+            </h1>
+            <p class="hero-desc">
+              Get verified, premium 1-on-1 tutoring for standard international curriculums. We specialize in IGCSE, GCSE, Pearson Edexcel, A Levels, and O Levels. Accelerate your understanding and secure your dream grades.
+            </p>
+            <div class="hero-actions">
+              <a href="#book-demo" class="btn btn-primary">Book a Free Demo Class</a>
+              <a href="#curriculums" class="btn btn-secondary">Browse Curriculums <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem; font-size: 0.8rem;"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Search Form Widget -->
+          <div class="hero-card fade-in" style="animation-delay: 0.2s;">
+            <h3 class="hero-card-title">Find Your Perfect Tutor</h3>
+            <form id="hero-quick-form">
+              <div class="search-field">
+                <label><i class="fa-solid fa-book-open"></i> Select Curriculum</label>
+                <select name="curriculum" class="custom-select" id="hero-select-curriculum" required>
+                  <option value="" disabled selected>Select curriculum...</option>
+                  <option value="IGCSE">IGCSE</option>
+                  <option value="GCSE">GCSE</option>
+                  <option value="Pearson Edexcel">Pearson Edexcel</option>
+                  <option value="A Levels">A Levels</option>
+                  <option value="O Levels">O Levels</option>
+                </select>
+              </div>
+
+              <div class="search-field">
+                <label><i class="fa-solid fa-graduation-cap"></i> Target Subject / Grade</label>
+                <select name="grade" class="custom-select" id="hero-select-grade" required>
+                  <option value="" disabled selected>Select subject/level...</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Biology">Biology</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="English Language/Literature">English Language / Lit</option>
+                  <option value="Business/Economics">Business & Economics</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-accent card-submit">Search Tutors <i class="fa-solid fa-arrow-right-long" style="margin-left: 0.5rem;"></i></button>
+            </form>
+            <div class="card-subtext">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-primary); margin-right: 4px;"></i> First demo class is always 100% free
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEPS SECTION (LIGHT THEME) -->
+      <section class="section theme-light" id="how-it-works">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-subtitle">Simple Process</span>
+            <h2 class="section-title">Start Learning In 3 Easy Steps</h2>
+            <p class="section-desc">From your initial search to your first 1-on-1 lesson — we make the entire learning experience seamless, engaging, and result-oriented.</p>
+          </div>
+
+          <div class="steps-grid">
+            <!-- Step 1 -->
+            <div class="step-card reveal" style="transition-delay: 0.1s;">
+              <div class="step-number">01</div>
+              <h4 class="step-title">Select Your Curriculum</h4>
+              <p>Choose the level of education (IGCSE, GCSE, Pearson Edexcel, A/O Levels) and the specific subjects you need support in.</p>
+              <a href="#curriculums" class="step-link">Browse Curriculums <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card reveal" style="transition-delay: 0.2s;">
+              <div class="step-number">02</div>
+              <h4 class="step-title">Book A Free Demo</h4>
+              <p>Fill out the request form to specify details, timing, and tutor preferences. We will match you with the ideal instructor for a free trial.</p>
+              <a href="#book-demo" class="step-link">Request Trial Class <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card reveal" style="transition-delay: 0.3s;">
+              <div class="step-number">03</div>
+              <h4 class="step-title">Begin Personalized Tutoring</h4>
+              <p>Start your high-impact, custom 1-on-1 classes via interactive whiteboard platforms (Zoom/Google Meet) based on your schedule.</p>
+              <a href="#book-demo" class="step-link">Get Started Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURRICULUMS / SUBJECTS SECTION (LIGHT THEME) -->
+      <section class="section subjects-section theme-light" id="curriculums">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-subtitle">Curriculums We Specialize In</span>
+            <h2 class="section-title">Academic Paths Covered</h2>
+            <p class="section-desc">We offer highly specialized tutoring aligned with official exam specifications and syllabus requirements.</p>
+          </div>
+
+          <div class="subjects-grid">
+            <!-- Curriculum 1: IGCSE -->
+            <div class="subject-card reveal">
+              <div class="subject-icon-box">
+                <i class="fa-solid fa-earth-americas fa-lg"></i>
+              </div>
+              <div class="subject-info">
+                <h4 class="subject-name">IGCSE / LGCSE</h4>
+                <p class="subject-desc">Comprehensive preparation for Cambridge and Pearson Edexcel IGCSE syllabuses. Master core sciences, mathematics, and humanities.</p>
+              </div>
+            </div>
+
+            <!-- Curriculum 2: GCSE -->
+            <div class="subject-card reveal" style="transition-delay: 0.1s;">
+              <div class="subject-icon-box">
+                <i class="fa-solid fa-school-flag fa-lg"></i>
+              </div>
+              <div class="subject-info">
+                <h4 class="subject-name">GCSE</h4>
+                <p class="subject-desc">Tailored support for UK domestic board exams (AQA, OCR, Edexcel). Focused past paper practice and mock preparation.</p>
+              </div>
+            </div>
+
+            <!-- Curriculum 3: Pearson Edexcel -->
+            <div class="subject-card reveal" style="transition-delay: 0.2s;">
+              <div class="subject-icon-box">
+                <i class="fa-solid fa-award fa-lg"></i>
+              </div>
+              <div class="subject-info">
+                <h4 class="subject-name">Pearson Edexcel</h4>
+                <p class="subject-desc">Specialized learning material and revision guides structured for Edexcel International Qualifications and assessments.</p>
+              </div>
+            </div>
+
+            <!-- Curriculum 4: A Levels -->
+            <div class="subject-card reveal" style="transition-delay: 0.3s;">
+              <div class="subject-icon-box">
+                <i class="fa-solid fa-chart-line fa-lg"></i>
+              </div>
+              <div class="subject-info">
+                <h4 class="subject-name">A Levels</h4>
+                <p class="subject-desc">In-depth concepts coverage for Advanced Level modules (AS & A2). Advanced problem solving for top-tier university entry.</p>
+              </div>
+            </div>
+
+            <!-- Curriculum 5: O Levels -->
+            <div class="subject-card reveal" style="transition-delay: 0.4s;">
+              <div class="subject-icon-box">
+                <i class="fa-solid fa-compass fa-lg"></i>
+              </div>
+              <div class="subject-info">
+                <h4 class="subject-name">O Levels</h4>
+                <p class="subject-desc">Strong conceptual baseline training and past paper drilling. Learn strategies to confidently secure straight A* grades.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="subjects-cta reveal">
+            <a href="#book-demo" class="btn btn-primary">Find Your Curriculum Tutor</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS SECTION -->
+      <section class="section stats-section">
+        <div class="container stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-num" data-val="15">0<span>+</span></div>
+            <div class="stat-label">Countries Represented</div>
+          </div>
+          <div class="stat-item reveal" style="transition-delay: 0.1s;">
+            <div class="stat-num" data-val="10000">0<span>+</span></div>
+            <div class="stat-label">Tutoring Hours Conducted</div>
+          </div>
+          <div class="stat-item reveal" style="transition-delay: 0.2s;">
+            <div class="stat-num" data-val="100">0<span>%</span></div>
+            <div class="stat-label">Free Trial Classes Offered</div>
+          </div>
+          <div class="stat-item reveal" style="transition-delay: 0.3s;">
+            <div class="stat-num" data-val="98">0<span>%</span></div>
+            <div class="stat-label">Student Success Rate</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION (LIGHT THEME) -->
+      <section class="section theme-light" id="faqs">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-subtitle">Got Questions?</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-desc">Everything you need to know about starting your online tutoring journey with Leanovia Virtual Institute.</p>
+          </div>
+
+          <div class="faq-container">
+            <!-- FAQ 1 -->
+            <div class="faq-item reveal">
+              <div class="faq-header">
+                <h4 class="faq-question">How are lessons conducted?</h4>
+                <div class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Lessons are conducted live online, 1-on-1 via video conferencing tools like Zoom or Google Meet. We use interactive collaborative whiteboards where both the tutor and student can write, draw, and upload worksheets in real-time.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item reveal">
+              <div class="faq-header">
+                <h4 class="faq-question">Who chooses the tutor for my child?</h4>
+                <div class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Our academic matchmaker team selects the best tutor based on the student's requirements (curriculum, subject, learning pace, and timezone). You can also request a specific gender preference (male/female tutor).
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item reveal">
+              <div class="faq-header">
+                <h4 class="faq-question">Is the demo class completely free?</h4>
+                <div class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Yes, the first 30-minute diagnostic/demo class is completely free and comes with zero commitment. This allows the student to experience the classroom technology and evaluate the teacher's style.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item reveal">
+              <div class="faq-header">
+                <h4 class="faq-question">Do you provide preparation for Board exams?</h4>
+                <div class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Absolutely. We provide intensive preparation for IGCSE, GCSE, Pearson Edexcel, O Levels, and A Levels. This includes drilling past papers, clarifying marking schemes, and conducting timed mock exam drills.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item reveal">
+              <div class="faq-header">
+                <h4 class="faq-question">How are lesson reports shared?</h4>
+                <div class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  We send parent updates after sessions and compile detailed monthly progress reports detailing performance, homework tracking, and mock exam grades to keep families fully informed.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==========================================
+         BOOKING VIEW (DOCKABLE VIEW FOR FORM PAGE)
+         ========================================== -->
+    <div id="booking-view" class="hidden">
+      
+      <!-- Booking Page Hero/Banner -->
+      <section class="demo-hero-section">
+        <div class="container text-center">
+          <h1 class="demo-hero-title">Request A <span class="text-gradient">Free Demo Class</span></h1>
+          <p class="demo-hero-desc">Fill out the form below to connect with an expert 1-on-1 tutor. We will set up a free trial class based on your syllabus and timeline.</p>
+        </div>
+      </section>
+
+      <!-- Form Section -->
+      <section class="section theme-light" style="padding-top: 2rem;">
+        <div class="container">
+          
+          <!-- Alert Box -->
+          <div class="demo-alert-banner">
+            <div class="alert-icon"><i class="fa-solid fa-circle-info"></i></div>
+            <div class="alert-text">
+              <strong>First Demo Class is 100% Free!</strong> There is no commitment required. Spaces are limited for this week, secure yours now!
+            </div>
+          </div>
+
+          <div class="demo-grid-layout">
+            <!-- Form Card -->
+            <div class="demo-form-card">
+              <h3 class="form-card-heading">Tutor Request Form</h3>
+              <form id="booking-request-form">
+                
+                <!-- Step 1: Personal Info -->
+                <div class="form-section-header">
+                  <span class="form-sec-num">1</span>
+                  <h4>Student Information</h4>
+                </div>
+                <div class="form-input-grid">
+                  <div class="form-field">
+                    <label for="student-name">Student Name <span>*</span></label>
+                    <input type="text" id="student-name" class="form-input-control" placeholder="Enter student's full name" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="mobile-number">WhatsApp Mobile Number <span>*</span></label>
+                    <input type="tel" id="mobile-number" class="form-input-control" placeholder="e.g. +92 340 4403594" required>
+                  </div>
+                  <div class="form-field full-width">
+                    <label for="email-address">Email Address <span>*</span></label>
+                    <input type="email" id="email-address" class="form-input-control" placeholder="e.g. student@email.com" required>
+                  </div>
+                </div>
+
+                <!-- Step 2: Academic Needs -->
+                <div class="form-section-header">
+                  <span class="form-sec-num">2</span>
+                  <h4>Tutorial Needs</h4>
+                </div>
+                <div class="form-input-grid">
+                  <div class="form-field">
+                    <label for="grade-level">Class / Grade Level <span>*</span></label>
+                    <div class="select-field-wrapper">
+                      <select id="grade-level" class="form-select-control" required>
+                        <option value="" disabled selected>Select level...</option>
+                        <option value="IGCSE">IGCSE</option>
+                        <option value="GCSE">GCSE</option>
+                        <option value="Pearson Edexcel">Pearson Edexcel</option>
+                        <option value="A Levels">A Levels</option>
+                        <option value="O Levels">O Levels</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label for="subjects">Subjects Needed <span>*</span></label>
+                    <input type="text" id="subjects" class="form-input-control" placeholder="e.g. Physics, Chemistry, Math" required>
+                  </div>
+                </div>
+
+                <!-- Step 3: Preferences -->
+                <div class="form-section-header">
+                  <span class="form-sec-num">3</span>
+                  <h4>Tutor Preferences</h4>
+                </div>
+                <div class="form-input-grid">
+                  <div class="form-field full-width">
+                    <label>Preferred Tutor Gender</label>
+                    <div class="radio-group-container">
+                      <label class="radio-option">
+                        <input type="radio" name="tutor-gender" value="No Preference" checked>
+                        <span>No Preference</span>
+                      </label>
+                      <label class="radio-option">
+                        <input type="radio" name="tutor-gender" value="Male">
+                        <span>Male Tutor</span>
+                      </label>
+                      <label class="radio-option">
+                        <input type="radio" name="tutor-gender" value="Female">
+                        <span>Female Tutor</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 4: Details & Notes -->
+                <div class="form-section-header">
+                  <span class="form-sec-num">4</span>
+                  <h4>Location & Referral</h4>
+                </div>
+                <div class="form-input-grid">
+                  <div class="form-field">
+                    <label for="country">Country of Residence <span>*</span></label>
+                    <input type="text" id="country" class="form-input-control" placeholder="e.g. Pakistan, Saudi Arabia" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="referral">How did you hear about us?</label>
+                    <div class="select-field-wrapper">
+                      <select id="referral" class="form-select-control">
+                        <option value="Google Search">Google Search</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Friend/Family Recommendation">Friend or Family</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-field full-width">
+                    <label for="notes">Additional Information / Custom Requests</label>
+                    <textarea id="notes" class="form-input-control" placeholder="Enter details about your exam board, timing preferences, or specific goals..."></textarea>
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-submit-container">
+                  <button type="submit" class="btn btn-accent btn-glow form-submit-btn-whatsapp">
+                    BOOK FREE DEMO & CHAT ON WHATSAPP <i class="fa-brands fa-whatsapp" style="margin-left: 0.6rem; font-size: 1.2rem;"></i>
+                  </button>
+                  <p class="form-disclaimer"><i class="fa-solid fa-lock"></i> Your information is kept strictly secure and confidential.</p>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Form Sidebar Info -->
+            <div class="demo-sidebar-info">
+              <div class="info-widget">
+                <h4 class="widget-title">Why Leanovia?</h4>
+                <ul class="widget-list">
+                  <li>
+                    <div class="widget-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="widget-desc">
+                      <h5>1-on-1 Focused Attention</h5>
+                      <p>Unlike crowded classes, each lesson is entirely customized for the student's speed and understanding.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="widget-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="widget-desc">
+                      <h5>Certified Syllabus Experts</h5>
+                      <p>Our tutors specialize in specific exam boards (Cambridge, Edexcel, AQA) and past paper techniques.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="widget-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="widget-desc">
+                      <h5>Collaborative Classroom</h5>
+                      <p>Interactive shared whiteboards, real-time feedback, and recorded sessions for easy revision.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="widget-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="widget-desc">
+                      <h5>Regular Progress Reports</h5>
+                      <p>Detailed performance trackers, homework checking, and mock tests shared directly with parents.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Contact Box Widget -->
+              <div class="info-widget dark-widget">
+                <h4 class="widget-title">Need Immediate Help?</h4>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Speak directly to our educational consultants right now via phone or WhatsApp.</p>
+                <div class="widget-contact-actions">
+                  <a href="tel:+923404403594" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> Call +92 340 4403594</a>
+                  <a href="https://wa.me/923404403594" class="btn btn-accent" style="width: 100%; background: #25d366; box-shadow: none; border: none; color: #fff;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> Chat on WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Trusted in 15+ countries section (light background) -->
+      <section class="section theme-light" style="background: #ffffff; border-top: 1px solid var(--border-color);">
+        <div class="container text-center">
+          <span class="section-subtitle">Globally Recognized</span>
+          <h2 class="section-title">Trusted By Families Worldwide</h2>
+          <p class="section-desc" style="max-width: 600px; margin: 0 auto 3.5rem auto;">We support students across Europe, Middle East, and South Asia to secure their high academic achievements.</p>
+          
+          <div class="demo-trusted-grid">
+            <div class="trusted-item">
+              <div class="trusted-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3>10+ Years</h3>
+              <p>Academic Excellence</p>
+            </div>
+            <div class="trusted-item">
+              <div class="trusted-icon"><i class="fa-solid fa-users"></i></div>
+              <h3>1,000+</h3>
+              <p>Verified Elite Tutors</p>
+            </div>
+            <div class="trusted-item">
+              <div class="trusted-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>98%</h3>
+              <p>Success Grade Rate</p>
+            </div>
+            <div class="trusted-item">
+              <div class="trusted-icon"><i class="fa-solid fa-clock"></i></div>
+              <h3>Free Demo</h3>
+              <p>First session trial</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking Process Steps (How It Works) -->
+      <section class="section theme-light" style="background: var(--bg-dark); border-top: 1px solid var(--border-color); padding-bottom: 8rem;">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">How it Works</span>
+            <h2 class="section-title">Simple Steps To Your Free Demo</h2>
+          </div>
+
+          <div class="booking-timeline-grid">
+            <div class="timeline-step">
+              <div class="t-step-num">1</div>
+              <h4>Submit Request</h4>
+              <p>Fill out our short booking form with student details and subjects.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="t-step-num">2</div>
+              <h4>We Match You</h4>
+              <p>Our team chooses the most qualified tutor for your specific syllabus.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="t-step-num">3</div>
+              <h4>Free Trial Session</h4>
+              <p>Attend the 30-min trial class on Zoom/Google Meet. Experience the whiteboard.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="t-step-num">4</div>
+              <h4>Start Regular Prep</h4>
+              <p>Finalize weekly timings and start regular 1-on-1 tutoring sessions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==========================================
+       FOOTER (SHARED)
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="#home" class="footer-logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+            </svg>
+            <span>Leanovia <span class="logo-accent-text">Virtual Institute</span></span>
+          </a>
+          <p class="footer-desc">
+            Premium virtual classroom experience designed to help students master complex international syllabuses and secure straight A*s.
+          </p>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@leanovia.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+92 340 4403594</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Curriculums</h4>
+          <div class="footer-links">
+            <a href="#curriculums">IGCSE Prep</a>
+            <a href="#curriculums">GCSE Support</a>
+            <a href="#curriculums">Pearson Edexcel</a>
+            <a href="#curriculums">AS & A Levels</a>
+            <a href="#curriculums">O Levels Course</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Institute</h4>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#book-demo">Book Trial</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Quick Action</h4>
+          <div class="footer-links" style="gap: 1.2rem;">
+            <a href="https://wa.me/923404403594" class="btn btn-accent btn-small" style="padding: 0.6rem 1.2rem; font-size: 0.85rem; background: #25d366; box-shadow: none; border: none; color: #fff;" target="_blank"><i class="fa-brands fa-whatsapp" style="margin-right: 6px; font-size: 1rem;"></i> Chat via WhatsApp</a>
+            <a href="#book-demo" class="btn btn-primary btn-small" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Request Tutor</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Leanovia Virtual Institute. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/923404403594" class="footer-social-link" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
