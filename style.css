@@ -19,9 +19,9 @@
   --color-secondary: #4f46e5; /* Royal Indigo */
   --color-accent: #f43f5e; /* Sunset Rose */
   --color-accent-amber: #f59e0b; /* Golden Amber */
-  --color-text-main: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-text-dark: #64748b;
+  --color-text-main: #ffffff;
+  --color-text-muted: #e2e8f0;
+  --color-text-dark: #cbd5e1;
 
   --grad-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   --grad-teal: linear-gradient(135deg, #d97706, #f59e0b); /* Gold Gradient */
@@ -679,81 +679,98 @@ button {
 }
 
 /* ==========================================
-   FAQ SECTION
+   FAQ SECTION (DARK THEME & RESPONSIVE BOXED LAYOUT)
    ========================================== */
+#faqs {
+  background-color: var(--bg-dark);
+  color: #ffffff;
+}
+
+#faqs .section-title {
+  color: #ffffff !important;
+}
+
+#faqs .section-desc {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#faqs .section-subtitle {
+  color: #10b981 !important;
+}
+
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .faq-item {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  overflow: hidden;
+  background: none;
+  border: none;
+  overflow: visible;
+  box-shadow: none;
   transition: var(--transition-smooth);
 }
 
-.faq-item:hover {
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
-.faq-item.active {
-  border-color: var(--border-color-glow);
-  box-shadow: var(--shadow-glow);
-}
-
 .faq-header {
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   user-select: none;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+}
+
+.faq-item:hover .faq-header {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.faq-item.active .faq-header {
+  border-color: #10b981;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
 }
 
 .faq-question {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color-text-main);
+  color: #ffffff !important;
   padding-right: 1.5rem;
 }
 
 .faq-toggle {
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
+  font-size: 1.25rem;
+  color: #10b981;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-muted);
-  font-weight: bold;
-  font-size: 0.8rem;
-  transition: var(--transition-smooth);
+  transition: none;
   flex-shrink: 0;
 }
 
 .faq-item.active .faq-toggle {
-  transform: rotate(180deg);
-  background: var(--color-primary);
-  color: #fff;
+  color: #10b981;
+  transform: rotate(45deg);
 }
 
 .faq-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: none;
 }
 
 .faq-content {
-  padding: 0 2rem 1.8rem 2rem;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  padding: 1.2rem 1.75rem 0.5rem 1.75rem;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.98rem;
+  line-height: 1.75;
 }
 
 /* ==========================================
@@ -1123,6 +1140,16 @@ textarea.form-input {
   transform: translateY(0);
 }
 
+/* Mobile CTA Wrapper inside the nav drawer */
+.mobile-cta-wrapper {
+  display: none;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.mobile-cta-wrapper .btn {
+  width: 100%;
+}
+
 /* ==========================================
    RESPONSIVE DESIGN Breakpoints
    ========================================== */
@@ -1158,6 +1185,12 @@ textarea.form-input {
   }
   .hero-title {
     font-size: 2.8rem;
+  }
+  .nav-cta {
+    display: none !important;
+  }
+  .mobile-cta-wrapper {
+    display: block;
   }
   .nav-menu {
     position: fixed;
@@ -1201,6 +1234,21 @@ textarea.form-input {
 }
 
 @media (max-width: 480px) {
+  .logo-link {
+    font-size: 1.15rem;
+  }
+  .logo-link span span {
+    display: none;
+  }
+  .btn {
+    padding: 0.75rem 1.4rem !important;
+    font-size: 0.85rem !important;
+  }
+  .form-submit-btn-whatsapp {
+    padding: 0.9rem 1rem !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0;
+  }
   .hero-title {
     font-size: 2.2rem;
   }
