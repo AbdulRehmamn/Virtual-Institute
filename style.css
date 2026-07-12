@@ -612,6 +612,8 @@ button {
   transition: var(--transition-smooth);
 }
 
+
+
 .subject-card:hover .subject-icon-box {
   background: var(--color-secondary);
   color: #fff;
@@ -1237,9 +1239,9 @@ textarea.form-input {
   .logo-link {
     font-size: 1.15rem;
   }
-  .logo-link span span {
+  /* .logo-link span span {
     display: none;
-  }
+  } */
   .btn {
     padding: 0.75rem 1.4rem !important;
     font-size: 0.85rem !important;
