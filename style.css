@@ -7,49 +7,41 @@
   --font-primary: 'Outfit', sans-serif;
   --font-secondary: 'Plus Jakarta Sans', sans-serif;
 
-  /* Theme Colors - Premium Midnight Obsidian */
-  --bg-dark: #070919;
-  --bg-card: #0e122b;
-  --bg-card-hover: #161c3f;
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-color-glow: rgba(124, 58, 237, 0.35);
+  /* Theme Colors - Cinematic Matte Black & Dark Olive Green */
+  --bg-dark: #0A0A0A; /* Deep Black background */
+  --bg-card: #121212; /* Sleek Matte Black cards */
+  --bg-card-hover: #1c1c1c; /* Lighter Matte Black for hover state */
+  --border-color: rgba(85, 107, 47, 0.2); /* Dark Olive Green with transparency */
+  --border-color-glow: rgba(85, 107, 47, 0.6); /* Glowing Dark Olive Green border */
 
   /* Primary Accent & Gradients */
-  --color-primary: #7c3aed; /* Royal Violet */
-  --color-secondary: #4f46e5; /* Royal Indigo */
-  --color-accent: #f43f5e; /* Sunset Rose */
-  --color-accent-amber: #f59e0b; /* Golden Amber */
+  --color-primary: #556B2F; /* Dark Olive Green accent */
+  --color-secondary: #3D4E22; /* Darker tone of Olive Green */
+  --color-accent: #556B2F; /* Dark Olive Green accent */
+  --color-accent-amber: #556B2F; /* Unified to Olive Green */
   --color-text-main: #ffffff;
-  --color-text-muted: #e2e8f0;
-  --color-text-dark: #cbd5e1;
+  --color-text-muted: #a0a59a; /* Tinted light gray-green text */
+  --color-text-dark: #6c7265; /* Tinted darker text */
 
   --grad-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  --grad-teal: linear-gradient(135deg, #d97706, #f59e0b); /* Gold Gradient */
-  --grad-rose: linear-gradient(135deg, #e11d48, #f43f5e); /* Sunset Rose Gradient */
-  --grad-dark-overlay: linear-gradient(180deg, rgba(7, 9, 25, 0.8) 0%, rgba(7, 9, 25, 0.98) 100%);
-  --grad-hero: radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.12) 0%, rgba(79, 70, 229, 0.04) 50%, transparent 100%);
+  --grad-teal: linear-gradient(135deg, var(--color-primary), #3d4e22); 
+  --grad-rose: linear-gradient(135deg, var(--color-primary), #2d3a19);
+  --grad-dark-overlay: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.98) 100%);
+  --grad-hero: radial-gradient(circle at 80% 20%, rgba(85, 107, 47, 0.15) 0%, rgba(85, 107, 47, 0.03) 50%, transparent 100%);
 
   /* Shadows & Glows */
-  --shadow-glow: 0 0 30px rgba(124, 58, 237, 0.2);
-  --shadow-glow-teal: 0 0 30px rgba(245, 158, 11, 0.2);
-  --shadow-card: 0 10px 40px -10px rgba(2, 4, 18, 0.6);
+  --shadow-glow: 0 0 25px rgba(85, 107, 47, 0.3);
+  --shadow-glow-teal: 0 0 25px rgba(85, 107, 47, 0.3);
+  --shadow-card: 0 10px 40px -10px rgba(0, 0, 0, 0.8);
   
   /* Layout Transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
 }
 
-/* Light Theme Variable Override (Applied to specific sections) */
+/* Light Theme Variable Override (Disabled/Aligned to keep dark theme consistency) */
 .theme-light {
-  --bg-dark: #f8fafc; /* Light off-white */
-  --bg-card: #ffffff; /* Pure white cards */
-  --bg-card-hover: #f1f5f9; /* Slate 100 */
-  --border-color: rgba(15, 23, 42, 0.08); /* Dark slate borders */
-  --border-color-glow: rgba(124, 58, 237, 0.15);
-  --color-text-main: #0f172a; /* Dark text */
-  --color-text-muted: #475569; /* Slate 600 */
-  --color-text-dark: #64748b; /* Slate 500 */
-  --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+  /* Inherit all root properties to prevent light theme from showing bright colors */
 }
 
 .hidden {
@@ -165,7 +157,7 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 10px 25px rgba(85, 107, 47, 0.4);
 }
 
 .btn-secondary {
@@ -188,7 +180,7 @@ button {
 
 .btn-accent:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 10px 25px rgba(85, 107, 47, 0.4);
 }
 
 /* ==========================================
@@ -206,7 +198,7 @@ button {
 
 .header.sticky {
   padding: 0.8rem 0;
-  background: rgba(7, 9, 19, 0.75);
+  background: rgba(10, 10, 10, 0.75);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--border-color);
@@ -232,7 +224,7 @@ button {
   width: 2.2rem;
   height: 2.2rem;
   color: var(--color-primary);
-  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+  filter: drop-shadow(0 0 8px rgba(85, 107, 47, 0.5));
 }
 
 .nav-menu {
@@ -306,9 +298,9 @@ button {
   align-items: center;
   align-self: flex-start;
   gap: 0.5rem;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  color: #a5b4fc;
+  background: rgba(85, 107, 47, 0.1);
+  border: 1px solid rgba(85, 107, 47, 0.2);
+  color: var(--color-text-muted);
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -350,7 +342,7 @@ button {
 
 /* Hero Quick Search Card */
 .hero-card {
-  background: rgba(14, 18, 37, 0.6);
+  background: rgba(20, 20, 20, 0.6);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -366,7 +358,7 @@ button {
   inset: 0;
   border-radius: 24px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(99, 102, 241, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(85, 107, 47, 0.15) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -420,7 +412,7 @@ button {
 
 .custom-select:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 15px rgba(85, 107, 47, 0.2);
   background: var(--bg-card);
 }
 
@@ -513,7 +505,7 @@ button {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(85, 107, 47, 0.1);
   color: var(--color-primary);
   font-size: 1.3rem;
   font-weight: 800;
@@ -521,7 +513,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-bottom: 0.5rem;
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(85, 107, 47, 0.15);
   transition: var(--transition-smooth);
 }
 
@@ -555,7 +547,7 @@ button {
 }
 
 .step-link:hover {
-  color: #34d399;
+  color: var(--color-primary);
 }
 
 .step-link i {
@@ -570,7 +562,7 @@ button {
    SUBJECTS / CURRICULUMS SECTION
    ========================================== */
 .subjects-section {
-  background: rgba(14, 18, 37, 0.4);
+  background: rgba(20, 20, 20, 0.4);
 }
 
 .subjects-grid {
@@ -602,13 +594,13 @@ button {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 14px;
-  background: rgba(139, 92, 246, 0.1);
-  color: var(--color-secondary);
+  background: rgba(85, 107, 47, 0.1);
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(85, 107, 47, 0.15);
   transition: var(--transition-smooth);
 }
 
@@ -647,7 +639,7 @@ button {
    ========================================== */
 .stats-section {
   position: relative;
-  background: linear-gradient(180deg, rgba(7, 9, 19, 0) 0%, rgba(14, 18, 37, 0.6) 50%, rgba(7, 9, 19, 0) 100%);
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(20, 20, 20, 0.6) 50%, rgba(10, 10, 10, 0) 100%);
 }
 
 .stats-grid {
@@ -697,7 +689,7 @@ button {
 }
 
 #faqs .section-subtitle {
-  color: #10b981 !important;
+  color: var(--color-accent) !important;
 }
 
 .faq-container {
@@ -735,9 +727,9 @@ button {
 }
 
 .faq-item.active .faq-header {
-  border-color: #10b981;
+  border-color: var(--color-primary);
   background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 20px rgba(85, 107, 47, 0.15);
 }
 
 .faq-question {
@@ -749,7 +741,7 @@ button {
 
 .faq-toggle {
   font-size: 1.25rem;
-  color: #10b981;
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -758,7 +750,7 @@ button {
 }
 
 .faq-item.active .faq-toggle {
-  color: #10b981;
+  color: var(--color-primary);
   transform: rotate(45deg);
 }
 
@@ -817,7 +809,7 @@ button {
 }
 
 .form-box {
-  background: rgba(14, 18, 37, 0.6);
+  background: rgba(20, 20, 20, 0.6);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -833,7 +825,7 @@ button {
   inset: 0;
   border-radius: 24px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(99, 102, 241, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(85, 107, 47, 0.15) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -862,12 +854,12 @@ button {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(85, 107, 47, 0.1);
   font-size: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(85, 107, 47, 0.2);
 }
 
 .form-grid {
@@ -915,7 +907,7 @@ button {
 
 .form-input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 0 15px rgba(85, 107, 47, 0.25);
   background: var(--bg-card);
 }
 
@@ -982,7 +974,7 @@ textarea.form-input {
    FOOTER SECTION
    ========================================== */
 .footer {
-  background: #04050b;
+  background: #070707;
   border-top: 1px solid var(--border-color);
   padding: 5rem 0 2rem 0;
   position: relative;
@@ -1099,7 +1091,7 @@ textarea.form-input {
   background: var(--color-primary);
   color: #fff;
   border-color: var(--color-primary);
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 10px rgba(85, 107, 47, 0.4);
 }
 
 /* ==========================================
@@ -1107,13 +1099,13 @@ textarea.form-input {
    ========================================== */
 @keyframes pulse-border {
   0% {
-    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 0 0 rgba(85, 107, 47, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+    box-shadow: 0 0 0 10px rgba(85, 107, 47, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    box-shadow: 0 0 0 0 rgba(85, 107, 47, 0);
   }
 }
 
@@ -1200,7 +1192,7 @@ textarea.form-input {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: rgba(14, 18, 37, 0.95);
+    background: rgba(20, 20, 20, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1278,12 +1270,12 @@ textarea.form-input {
   background: var(--grad-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.2));
+  filter: drop-shadow(0 0 8px rgba(85, 107, 47, 0.2));
 }
 
 .demo-hero-section {
   padding: 10rem 0 3.5rem 0;
-  background: linear-gradient(180deg, rgba(7, 9, 25, 0.8) 0%, rgba(7, 9, 25, 0.1) 100%);
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%);
   position: relative;
 }
 
@@ -1307,8 +1299,8 @@ textarea.form-input {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(245, 158, 11, 0.04);
-  border: 1px solid rgba(245, 158, 11, 0.15);
+  background: rgba(85, 107, 47, 0.04);
+  border: 1px solid rgba(85, 107, 47, 0.2);
   padding: 1.2rem 1.8rem;
   border-radius: 16px;
   margin-bottom: 2.5rem;
@@ -1334,13 +1326,13 @@ textarea.form-input {
 
 @keyframes pulse-border-amber {
   0% {
-    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.2);
+    box-shadow: 0 0 0 0 rgba(85, 107, 47, 0.2);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+    box-shadow: 0 0 0 10px rgba(85, 107, 47, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    box-shadow: 0 0 0 0 rgba(85, 107, 47, 0);
   }
 }
 
@@ -1367,7 +1359,7 @@ textarea.form-input {
   inset: 0;
   border-radius: 24px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(124, 58, 237, 0.12) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(85, 107, 47, 0.15) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -1406,14 +1398,14 @@ textarea.form-input {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(85, 107, 47, 0.1);
   color: var(--color-primary);
   font-size: 0.85rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(85, 107, 47, 0.2);
 }
 
 .form-input-grid {
@@ -1460,7 +1452,7 @@ textarea.form-input {
 
 .form-input-control:focus, .form-select-control:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 15px rgba(124, 58, 237, 0.15);
+  box-shadow: 0 0 15px rgba(85, 107, 47, 0.15);
   background: var(--bg-card);
 }
 
@@ -1548,7 +1540,7 @@ textarea.form-input-control {
 
 .form-submit-btn-whatsapp:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 10px 25px rgba(85, 107, 47, 0.35);
 }
 
 .form-disclaimer {
@@ -1581,7 +1573,7 @@ textarea.form-input-control {
   inset: 0;
   border-radius: 24px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(124, 58, 237, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(85, 107, 47, 0.1) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -1629,7 +1621,7 @@ textarea.form-input-control {
 }
 
 .info-widget.dark-widget {
-  background: rgba(14, 18, 37, 0.4);
+  background: rgba(20, 20, 20, 0.4);
 }
 
 .widget-contact-actions {
@@ -1665,7 +1657,7 @@ textarea.form-input-control {
   font-size: 2.2rem;
   color: var(--color-primary);
   margin-bottom: 1.2rem;
-  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.3));
+  filter: drop-shadow(0 0 8px rgba(85, 107, 47, 0.3));
 }
 
 .trusted-item h3 {
@@ -1711,7 +1703,7 @@ textarea.form-input-control {
   right: -5px;
   font-size: 5rem;
   font-weight: 900;
-  color: rgba(124, 58, 237, 0.04);
+  color: rgba(85, 107, 47, 0.04);
   line-height: 1;
 }
 
