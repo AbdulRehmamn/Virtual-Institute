@@ -71,32 +71,33 @@ function router() {
 
   // Check if Hash starts with #book-demo
   if (hash.startsWith('#book-demo')) {
-    // Show booking page, hide home page
-    if (homeView) homeView.classList.add('hidden');
-    if (bookingView) bookingView.classList.remove('hidden');
+    // Show modal overlay, do NOT hide home page
+    if (bookingView) {
+      bookingView.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Lock body scroll when modal is open
+    }
     if (navContactLink) navContactLink.classList.add('active');
-
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // Parse params and pre-fill form fields
     const params = parseHashParams();
     if (params.curriculum) {
-      const gradeSelect = document.getElementById('grade-level');
-      if (gradeSelect) {
-        gradeSelect.value = params.curriculum;
+      const boardInput = document.getElementById('academic-board');
+      if (boardInput) {
+        boardInput.value = params.curriculum;
       }
     }
     if (params.subject) {
-      const subjectInput = document.getElementById('subjects');
+      const subjectInput = document.getElementById('subject-needed');
       if (subjectInput) {
         subjectInput.value = params.subject;
       }
     }
   } else {
-    // Show home page, hide booking page
-    if (homeView) homeView.classList.remove('hidden');
-    if (bookingView) bookingView.classList.add('hidden');
+    // Hide modal, keep home page visible
+    if (bookingView) {
+      bookingView.classList.add('hidden');
+      document.body.style.overflow = ''; // Unlock body scroll
+    }
 
     // Setup active state for current section link
     if (hash === '#home' || hash === '') {
@@ -304,14 +305,15 @@ function initBookingForm() {
       
       // Get Form Inputs
       const studentName = document.getElementById('student-name').value.trim();
-      const mobileNumber = document.getElementById('mobile-number').value.trim();
-      const emailAddress = document.getElementById('email-address').value.trim();
-      const gradeLevel = document.getElementById('grade-level').value;
-      const subjects = document.getElementById('subjects').value.trim();
-      const tutorGender = document.querySelector('input[name="tutor-gender"]:checked')?.value || 'No Preference';
-      const country = document.getElementById('country').value.trim();
-      const referral = document.getElementById('referral').value;
-      const notes = document.getElementById('notes').value.trim();
+      const studentCity = document.getElementById('student-city').value.trim();
+      const studentAge = document.getElementById('student-age').value.trim();
+      const studentGender = document.getElementById('student-gender').value;
+      const academicBoard = document.getElementById('academic-board').value.trim();
+      const subjectNeeded = document.getElementById('subject-needed').value.trim();
+      const appearingYear = document.getElementById('appearing-year').value.trim();
+      const preferredTimings = document.getElementById('preferred-timings').value.trim();
+      const studentEmail = document.getElementById('student-email').value.trim();
+      const whatsappNumber = document.getElementById('whatsapp-number').value.trim();
 
       // Format WhatsApp Message using WhatsApp Markdown (*bold*, _italics_)
       const message = 
@@ -319,20 +321,19 @@ function initBookingForm() {
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 👤 *Student Information:*
 • *Name:* ${studentName}
-• *WhatsApp:* ${mobileNumber}
-• *Email:* ${emailAddress}
+• *City:* ${studentCity}
+• *Age:* ${studentAge}
+• *Gender:* ${studentGender}
 
 📚 *Academic Details:*
-• *Grade / Level:* ${gradeLevel}
-• *Target Subjects:* ${subjects}
+• *Academic Board:* ${academicBoard}
+• *Subject:* ${subjectNeeded}
+• *Appearing Year:* ${appearingYear}
+• *Preferred Timings:* ${preferredTimings}
 
-⚙️ *Preferences & Location:*
-• *Tutor Gender:* ${tutorGender}
-• *Country:* ${country}
-• *Source:* ${referral}
-
-📝 *Additional Notes:*
-${notes ? `"${notes}"` : 'None provided'}
+📞 *Contact Details:*
+• *Email ID:* ${studentEmail}
+• *WhatsApp Number:* ${whatsappNumber}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 _Sent via Leanovia Web Booking System_`;
 
