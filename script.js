@@ -3,6 +3,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Theme Toggle
+  initThemeToggle();
+
   // Initialize Router
   initRouter();
 
@@ -348,4 +351,51 @@ _Sent via Leanovia Web Booking System_`;
       window.open(whatsappUrl, '_blank');
     });
   }
+}
+
+/* ==========================================
+   THEME TOGGLE INITIALIZATION
+   ========================================== */
+function initThemeToggle() {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  if (!themeToggleBtn) return;
+
+  const icon = themeToggleBtn.querySelector('i');
+  
+  // Retrieve saved theme or default to dark
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+
+  if (savedTheme === 'light') {
+    document.body.classList.add('theme-light');
+    if (icon) {
+      icon.className = 'fa-solid fa-moon';
+    }
+  } else {
+    document.body.classList.remove('theme-light');
+    if (icon) {
+      icon.className = 'fa-solid fa-sun';
+    }
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('theme-light');
+    const isLight = document.body.classList.contains('theme-light');
+    
+    // Animate the icon transition
+    if (icon) {
+      icon.style.transform = 'rotate(360deg) scale(0)';
+      setTimeout(() => {
+        if (isLight) {
+          icon.className = 'fa-solid fa-moon';
+          localStorage.setItem('theme', 'light');
+        } else {
+          icon.className = 'fa-solid fa-sun';
+          localStorage.setItem('theme', 'dark');
+        }
+        icon.style.transform = 'rotate(0deg) scale(1)';
+      }, 200);
+    } else {
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    }
+  });
 }
