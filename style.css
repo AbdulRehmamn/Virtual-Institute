@@ -182,6 +182,53 @@ body.theme-light .faq-content {
   color: rgba(0, 0, 0, 0.8) !important;
 }
 
+/* Light Mode Olive Card Theme Overrides */
+body.theme-light .step-card,
+body.theme-light .subject-card {
+  background: var(--color-primary);
+  border-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+body.theme-light .step-card:hover,
+body.theme-light .subject-card:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  box-shadow: 0 10px 30px rgba(85, 107, 47, 0.35);
+}
+
+body.theme-light .step-title,
+body.theme-light .subject-name {
+  color: #ffffff !important;
+}
+
+body.theme-light .step-card p,
+body.theme-light .subject-desc {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+body.theme-light .step-link {
+  color: #ffffff !important;
+}
+
+body.theme-light .step-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.theme-light .step-number,
+body.theme-light .subject-icon-box {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+body.theme-light .step-card:hover .step-number,
+body.theme-light .subject-card:hover .subject-icon-box {
+  background: #ffffff !important;
+  color: var(--color-primary) !important;
+  border-color: #ffffff !important;
+}
+
 /* Theme Toggle Button Styles */
 .theme-toggle-btn {
   width: 2.5rem;
